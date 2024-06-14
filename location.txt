@@ -1,0 +1,14 @@
+Mumbai 146 513 
+Navi_Mumbai 179 579 
+Pune 304 637 
+Nashik 312 359 
+Dhule 456 239 
+Jalgaon 606 243 
+Aurangabad 553 368 
+Akola 790 269 
+Nagpur 973 305 
+Beed 634 473 
+Nanded 846 496 
+Latur 732 567 
+Solapur 612 673 
+Ahmednagar 452 498 
