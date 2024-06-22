@@ -30,9 +30,8 @@ To use RouteCraft, compile and run the program in a C++ environment that support
 ## Additional Resources
 
 For guidance on linking `graphics.h` library and getting started, watch this YouTube tutorial:
-
-[Link to YouTube Tutorial](https://www.youtube.com/watch?v=VEkAj-xVTKQ)
-This tutorial covers how to link and use the `graphics.h` library, helping you set up RouteCraft effectively.
+To run this code, if you are using CodeBlocks v20.03, follow this [Link to YouTube Tutorial](https://www.youtube.com/watch?v=VEkAj-xVTKQ)
+. Caution: while using this software, turn off your antivirus. This software is totally safe, but sometimes the antivirus does not allow the graphic mode to open.
 
 ## Contributing
 
