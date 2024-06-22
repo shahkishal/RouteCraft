@@ -31,7 +31,7 @@ To use RouteCraft, compile and run the program in a C++ environment that support
 
 For guidance on linking `graphics.h` library and getting started, watch this YouTube tutorial:
 
- <a href="https://www.youtube.com/watch?v=VEkAj-xVTKQ" target="_blank">[Link to YouTube Tutorial]</a> 
+[Link to YouTube Tutorial](https://www.youtube.com/watch?v=VEkAj-xVTKQ)
 This tutorial covers how to link and use the `graphics.h` library, helping you set up RouteCraft effectively.
 
 ## Contributing
