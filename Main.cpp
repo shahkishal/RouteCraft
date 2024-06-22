@@ -22,6 +22,19 @@ vector<vector<int>> best;
 
 int check(string s , int x,int y);
 void home();
+int x5()
+{
+    return getmaxx();
+}
+
+int x1()
+{
+    return getmaxx();
+}
+int y1()
+{
+    return getmaxy();
+}
 
 void initFullScreenWindow(int &width, int &height) {
     width = GetSystemMetrics(SM_CXSCREEN);
@@ -89,7 +102,7 @@ int intinput(int x, int y) {
 
             getmouseclick(WM_LBUTTONDOWN, x1, y1);
 
-            if(x1>=1269 && x1<=1270+56 && y1>=29 && y1<=86)
+             if(x1>=x5()-105 && x1<=x5()-45 && y1>=29 && y1<=86)
             {
                 return -1;
             }
@@ -179,7 +192,7 @@ int intinput2(int x, int y,int stage) {
 
             getmouseclick(WM_LBUTTONDOWN, x1, y1);
 
-            if(x1>=1269 && x1<=1270+56 && y1>=29 && y1<=86)
+             if(x1>=x5()-105 && x1<=x5()-45 && y1>=29 && y1<=86)
             {
                 return -1;
             }
@@ -367,7 +380,7 @@ string stringinput(int x, int y) {
 
             getmouseclick(WM_LBUTTONDOWN, x1, y1);
 
-            if(x1>=1269 && x1<=1270+56 && y1>=29 && y1<=86)
+             if(x1>=x5()-105 && x1<=x5()-45 && y1>=29 && y1<=86)
             {
                 return "error";
             }
@@ -586,13 +599,13 @@ void mouse(string &x,string &y,string current)
             {
                 mouseX=110;
                 mouseY=660;
-            }// readimagefile("logo2.bmp",  5,660,  110,760);
+            }
         }
          if (ismouseclick(WM_LBUTTONDOWN)) {
 
             getmouseclick(WM_LBUTTONDOWN, x1, y1);
 
-            if(x1>=1269 && x1<=1270+56 && y1>=29 && y1<=86)
+             if(x1>=x5()-105 && x1<=x5()-45 && y1>=29 && y1<=86)
             {
                 x = "error" ;
                 y= "error" ;
@@ -620,7 +633,7 @@ void mouse(string &x,string &y,string current)
 
                         getmouseclick(WM_LBUTTONDOWN, x1, y1);
 
-                        if(x1>=1269 && x1<=1270+56 && y1>=29 && y1<=86)
+                         if(x1>=x5()-105 && x1<=x5()-45 && y1>=29 && y1<=86)
                         {
                             x = "error" ;
                             y= "error" ;
@@ -664,11 +677,13 @@ void mouse(string &x,string &y,string current)
 void adddata()
 {
     string current,x,y;
+
     cleardevice();
     setcolor(WHITE);
-    readimagefile("logo2.bmp",  5,660,  110,760);
+    readimagefile("logo2.bmp",  5,y1()-100,  110,y1());
     setcolor(DARKGRAY);
-    outtextxy(1100, 700 ,"Press Enter to Continue ...");
+    outtextxy(x1()-250,y1()-50 ,"Press Enter to Continue ...");
+
     draw();
     int flag=0;
 
@@ -721,7 +736,7 @@ void adddata()
 
       if (ismouseclick(WM_LBUTTONDOWN)) {
             getmouseclick(WM_LBUTTONDOWN, x1, y1);
-            if(x1>=1269 && x1<=1270+56 && y1>=29 && y1<=86)
+             if(x1>=x5()-105 && x1<=x5()-45 && y1>=29 && y1<=86)
             {
                 return ;
             }
@@ -862,7 +877,7 @@ void adddata()
 
             getmouseclick(WM_LBUTTONDOWN, x1, y1);
 
-            if(x1>=1269 && x1<=1270+56 && y1>=29 && y1<=86)
+            if(x1>=x5()-105 && x1<=x5()-45 && y1>=29 && y1<=86)
             {
                 return ;
             }
@@ -907,9 +922,9 @@ void removedata()
 
     string in;
     do{
-            readimagefile("logo2.bmp",  5,660,  110,760);
+            readimagefile("logo2.bmp",  5,y1()-100,  110,y1());
             setcolor(DARKGRAY);
-            outtextxy(1100, 700 ,"Press Enter to Continue ...");
+            outtextxy(x1()-250,y1()-50 ,"Press Enter to Continue ...");
      in= stringinput(10,40);
      if(in=="error")
        return ;
@@ -961,9 +976,9 @@ setcolor(YELLOW);
     setcolor(WHITE);
     outtextxy(10, 40, (char*)in.c_str());
     draw();
-    readimagefile("logo2.bmp",  5,660,  110,760);
+    readimagefile("logo2.bmp",  5,y1()-100,  110,y1());
     setcolor(DARKGRAY);
-    outtextxy(1100, 700 ,"Press Enter to Continue ...");
+    outtextxy(x1()-250,y1()-50 ,"Press Enter to Continue ...");
     setcolor(YELLOW);
      outtextxy(10, 70, "Press the Space key to delete another location.");
     char re;
@@ -979,7 +994,7 @@ setcolor(YELLOW);
 
 
             getmouseclick(WM_LBUTTONDOWN, x, y);
-            if(x>=1269 && x<=1270+56 && y>=29 && y<=86)
+             if(x>=x5()-105 && x<=x5()-45 && y>=29 && y<=86)
             {
                 return ;
             }
@@ -1035,7 +1050,7 @@ int addstop()
              delay(150);
             getmouseclick(WM_LBUTTONDOWN, x, y);
 
-             if(x>=1269 && x<=1270+56 && y>=29 && y<=86)
+              if(x>=x5()-105 && x<=x5()-45 && y>=29 && y<=86)
             {
                 return -1;
             }
@@ -1086,13 +1101,14 @@ int addstop()
 
 void home() {
 
-    int RECT_WIDTH = 55;   // Width of each rectangle
+    //rectangle(x5()-105 ,29,x5()-45,86 );
+    int RECT_WIDTH = 50;   // Width of each rectangle
     int RECT_HEIGHT = 7;   // Height of each rectangle
     int RADIUS = 3;         // Radius of the rounded curve
     int x,y;
     setcolor(WHITE);
     for (int i = 0; i < 3; ++i) {
-         x = 1270  ; // X position calculation
+         x = x1()-100 ; // X position calculation
          y = 30+ i * 13; // Y position (fixed)
 
         // Draw the rounded rectangle with white fill color
@@ -1203,7 +1219,7 @@ int main() {
     int flag=0;
 
     int x, y;
-    int mainx=400,mainy=300;
+    int mainx=(x1() / 2)-280,mainy=(y1()/2)-150;
 
     do{
 
@@ -1212,7 +1228,7 @@ int main() {
     fix2();
     cleardevice();
      setcolor(WHITE);
- readimagefile("logo2.bmp",  484,10,  884,310);
+ readimagefile("logo2.bmp",  (x1() / 2)-200,10,  (x1() / 2)-200+400,310);
       setWindowTitle("Main Menu");
      setcolor(COLOR(255, 140, 0));
      settextstyle(SANS_SERIF_FONT, HORIZ_DIR, 6);
@@ -1240,9 +1256,7 @@ int main() {
     outtextxy(100+mainx, 300+mainy, "Exit");
     setcolor(DARKGRAY);
      settextstyle(SANS_SERIF_FONT, HORIZ_DIR, 3);
-      outtextxy(1100, 700, " - Created by Kishal Shah");
-
-
+      outtextxy(x1()-350, y1()-100, " - Created by Kishal Shah");
 
     while(1)
     {
@@ -1281,9 +1295,9 @@ int main() {
                 menu=0;
                 flag=1;
             }
-            else if(x>=1100 && x<=1330 && y>=700 && y<=730)
+            else if(x>=x1()-350 && x<=x1()-350+230&& y>=y1()-100 && y<=y1()-70)
             {
-                myinfo();
+                myinfo(); //230
                 goto error;
 
             }
@@ -1338,8 +1352,8 @@ int main() {
     do{
 
      setcolor(DARKGRAY);
-    outtextxy(1100, 700 ,"Press Enter to Continue ...");
-    readimagefile("logo2.bmp",  5,660,  110,760);
+    outtextxy(x1()-250,y1()-50 ,"Press Enter to Continue ...");
+    readimagefile("logo2.bmp",  5,y1()-100,  110,y1());
     home();
 
     setcolor(YELLOW);
@@ -1470,7 +1484,7 @@ int main() {
 
         if(stop1==1)
             goto skip2;
-
+        setcolor(WHITE);
         outtextxy(10, 170, "Enter Escape Key to Exit  ");
 
         int x1,y1;
@@ -1484,7 +1498,7 @@ int main() {
 
             getmouseclick(WM_LBUTTONDOWN, x1, y1);
 
-            if(x1>=1269 && x1<=1270+56 && y1>=29 && y1<=86)
+             if(x1>=x5()-105 && x1<=x5()-45 && y1>=29 && y1<=86)
             {
                 goto error ;
             }
